@@ -1,0 +1,26 @@
+books:
+  - title: "A Game of Thrones"
+    author: George R. R. Martin
+    main_characters:
+      - Ned Stark
+      - Robert Baratheon
+      - Tyrion Lannister
+      - Daenerys Targaryen
+      - Jon Snow
+      - Arya Stark
+      - Cersei Lannister
+
+  - title: "Harry Potter and the Philosopher's Stone"
+    author: "Joanne Rowling"
+    main_characters:
+      - Harry Potter
+      - Ron Weasley
+      - Hermione Granger
+
+  - title: The Hound of the Baskervilles
+    author: Arthur Conan Doyle
+    main_characters:
+      - Sherlock Holmes
+      - John Watson
+      - Sir Hugo Baskerville
+      - Sir Charles Baskerville

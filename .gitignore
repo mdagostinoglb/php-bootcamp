@@ -1,0 +1,4 @@
+VM/.vagrant
+.DS_STORE
+vendor
+VM/public/Week4/*
