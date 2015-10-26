@@ -423,12 +423,12 @@ Your API will have to react to the following resources:
 
 
 ```
-/room/ID
-/rooms
-/guest/ID
-/guests
-/booking/ID
-/bookings
+GET, POST:   /room/ID
+GET:         /rooms
+GET, POST:   /guest/ID
+GET:         /guests
+GET, POST:   /booking/ID
+GET:         /bookings
 ```
 
 The API should allow you to:
