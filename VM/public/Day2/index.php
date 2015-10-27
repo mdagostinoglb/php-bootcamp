@@ -1,6 +1,6 @@
 <?php
 	echo "
-	<form action=\"two.php\" method=\"GET\">
+	<form action=\"index.php\" method=\"GET\">
 		Travel using a:
 		<br>
 		<input type=\"radio\" name=\"vehicle\" value=\"1\">Plane
