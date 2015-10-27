@@ -3,7 +3,7 @@
 	<form action=\"index.php\" method=\"GET\">
 		Travel using a:
 		<br>
-		<input type=\"radio\" name=\"vehicle\" value=\"1\">Plane
+		<input type=\"radio\" name=\"vehicle\" value=\"1\" checked>Plane
 		<br>
 		<input type=\"radio\" name=\"vehicle\" value=\"2\">Car
 		<br>
@@ -11,7 +11,7 @@
 		<br>
 		Passengers: 
 		<br>
-		<input type=\"text\" name=\"passengers\" size=\"10\">
+		<input type=\"text\" name=\"passengers\" size=\"10\" value=\"1\">
 		<br>
 		<input type=\"submit\" value=\"Travel!\">
 
