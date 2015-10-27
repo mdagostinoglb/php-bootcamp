@@ -2,7 +2,7 @@
 
 include("planes.php");
 include("cars.php");
-include("bike.php");
+include("bikes.php");
 
 echo'<font color="red"> Planes <br> </font>';
 $Plane_1= new Planes();
