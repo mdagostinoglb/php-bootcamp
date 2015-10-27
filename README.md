@@ -169,7 +169,11 @@ You will commit all your code on a daily basis, when you finish your practice. T
 # Introduction
 
   - This repository contains inside the VM directory the code for the box.scotch.io
-project. You will need to [Install and understand what is a Virtual Machine](https://box.scotch.io/#get-started) to run the code of this Bootcamp. If you already installed Vagrant and Virtualbox on your machine, you just have to run from a terminal the command **vagrant up** inside the VM directory. If you use Windows, you may want to use [Putty](http://www.putty.org/) to connect via SSH to the virtual machine.
+project. You will need to [Install and understand what is a Virtual Machine](https://box.scotch.io/#get-started) to run the code of this Bootcamp. If you already installed Vagrant and Virtualbox on your machine, you just have to run from a terminal the command **vagrant up** inside the directory VM (that contains the Vagrantfile file).
+
+  - If you use a 32 bit system, the box.scotch.io will not work since is a 64bit system. In that case, just remove the file VM/Vagrantfile and rename the VM/Vagrantfile.32bits to VM/Vagrantfile. Then run vagrant up as usual.
+
+  - If you use Windows, you may want to use [Putty](http://www.putty.org/) to connect via SSH to the virtual machine.
 
   - All the modifications you make on the VM/public folder will be automatically available inside the virtual machine. Remember once you start the VM it is accessible through the http://192.168.33.10 url, unless you modify that IP on the VM/Vagrantfile file.
 
