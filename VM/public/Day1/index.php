@@ -87,7 +87,7 @@ class Bikes
 }
 
 echo '<font color="red"> Bikes <br> </font>';
-$Bike_1= new Cars();
+$Bike_1= new Bikes();
 echo 'Speed: ';$Bike_1->speed();
 echo 'Can fly?: ';$Bike_1->canFly();
 echo 'Max. Passengers: ';$Bike_1->maxPassengers();
