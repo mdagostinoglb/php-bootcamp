@@ -39,13 +39,13 @@
 		}
 	}
 	
-		if ($vehicle == "2"){
+		elseif ($vehicle == "2"){
 		$obj2 = new Cars();
 		$maximum=$obj2->maxPassengers();
 		if ($passengers > $maximum){
 			//echo "<script>alert('You can not travel on a Car whit ".$passengers." passengers. The maximum number of allowed passengers for the selected transport is ".$obj2->maxPassengers().".');</script>"; 
 			echo "<div style=\"color:#FF0404; background-color:#EEBE3D; width:500px; border: solid; padding:4px;    \" class=\"alert alert-danger\">
-			You can not travel on a Plane whit ".$passengers." passengers. The maximum number of allowed passengers for the selected transport is ".$obj2->maxPassengers()."
+			You can not travel on a Car whit ".$passengers." passengers. The maximum number of allowed passengers for the selected transport is ".$obj2->maxPassengers()."
 			</div>";
 		}
 		else{
@@ -53,13 +53,13 @@
 		}
 	}
 	
-	if ($vehicle == "3"){
+	elseif ($vehicle == "3"){
 		$obj3 = new Bikes();
 		$maximum=$obj3->maxPassengers();
 		if ($passengers > $maximum){
 			//echo "<script>alert('You can not travel on a Bike whit ".$passengers." passengers. The maximum number of allowed passengers for the selected transport is ".$obj3->maxPassengers().".');</script>"; 
 			echo "<div style=\"color:#FF0404; background-color:#EEBE3D; width:500px; border: solid; padding:4px;    \" class=\"alert alert-danger\">
-			You can not travel on a Plane whit ".$passengers." passengers. The maximum number of allowed passengers for the selected transport is ".$obj3->maxPassengers()."
+			You can not travel on a Bike whit ".$passengers." passengers. The maximum number of allowed passengers for the selected transport is ".$obj3->maxPassengers()."
 			</div>";
 		}
 		else{
