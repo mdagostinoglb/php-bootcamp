@@ -9,7 +9,7 @@
 	
 	class Planes extends Transport{
 		public function distance(){
-			if (empty($_GET['hours'])) { $hours="";} else { $hours=filter_var($_GET['hours'], FILTER_SANITIZE_NUMBER_INT);}
+			if (empty($_GET['hours'])) { $hours="";} else { $hours=filter_var($_GET['hours'], FILTER_VALIDATE_FLOAT);}
 			return $hours;
 		}
 		
@@ -32,7 +32,7 @@
 	
 	class Cars extends Transport{
 		public function distance(){
-			if (empty($_GET['hours'])) { $hours="";} else { $hours=filter_var($_GET['hours'], FILTER_SANITIZE_NUMBER_INT);}
+			if (empty($_GET['hours'])) { $hours="";} else { $hours=filter_var($_GET['hours'], FILTER_VALIDATE_FLOAT);}
 			return $hours;
 		}
 		
@@ -57,7 +57,7 @@
 	
 	class Bikes extends Transport{
 		public function distance(){
-			if (empty($_GET['hours'])) { $hours="";} else { $hours=filter_var($_GET['hours'], FILTER_SANITIZE_NUMBER_INT);}
+			if (empty($_GET['hours'])) { $hours="";} else { $hours=filter_var($_GET['hours'], FILTER_VALIDATE_FLOAT);}
 			return $hours;
 		}
 		
