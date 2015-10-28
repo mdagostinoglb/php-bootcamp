@@ -1,11 +1,21 @@
 <?php
 
-class Cars extends Transport 
+class Cars extends Transport implements iT
 {
-    public $name='Car';
-    public $speed_var = '200';
-    public $canFly_var ="It can't fly";
-    public $maxPassengers_var ='5';
+
+    public function speed() {
+        return $speed_var = '200';
+    }
+    public function canFly() {
+        return $canFly_var ="It can't fly";
+
+    }
+    public function maxPassengers() {
+        return $maxPassengers_var ='5';
+    }
+    public function getName() {
+		return $name='Plane';
+    }
 
     public function calculate($minutes) {
     	$speed_var = '200';

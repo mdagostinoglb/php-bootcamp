@@ -1,10 +1,10 @@
  	
     <form  name="form1" method="post" enctype="multipart/form-data">
-    <p><strong><H2>Calculate the distance you have traveled:</H2>Travel using a:</strong></p>
-    <input type="radio" name="var" value='1'>Plane <br>
-	<input type="radio" name="var" value='2'>Car <br>
-	<input type="radio" name="var" value='3'>Bike <br> 
-	<br><strong>Enter the minutes of travel:</strong><br>
+    <p><strong><H2><font face= 'Arial'>Calculate the distance you have traveled:</H2>Travel using a:</font></strong></p>
+    <input type="radio" name="var" value='1'><font face= 'Arial'>Plane <br></font>
+	<input type="radio" name="var" value='2'><font face= 'Arial'>Car <br></font>
+	<input type="radio" name="var" value='3'><font face= 'Arial'>Bike <br> </font>
+	<br><strong><font face= 'Arial'>Enter the minutes of travel:</font></strong><br>
     <input type="text" name="min" value="" size="50"/><br/>
     <input type="submit" name="submit" value="Calculate"/>
 </form>
@@ -35,8 +35,9 @@ if (isset($_POST["submit"])){
 			$name=$trans->getName();
 			break;	
 	}
-	echo "<li><font color=#FF0000>$name <br> </font></li>";
-	$total=($trans->calculate($new_min));
+	echo "<li><font face= 'Arial' color=#FF0000>$name <br> </font></li>";
+	echo "<font face= 'Arial'>Speed:</font>".$trans->speed();echo " km/h<br>";
+	$total= round ($trans->calculate($new_min),2,PHP_ROUND_HALF_UP);
 	echo "<br><span style='border-image: initial;
      			 border:1px solid #FF0000; 
      			 BACKGROUND-COLOR:#FFDAB9;

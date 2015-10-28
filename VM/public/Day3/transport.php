@@ -24,7 +24,7 @@ abstract class Transport implements iT
     }
 
     public function calculate($minutes) {
-    	return $total;
+    	return $this->$total;
     }
 
 }
