@@ -1,5 +1,6 @@
 <?php
-class Planes
+
+class Planes extends vehicle
 {
     // Declaración de propiedades
  
@@ -9,18 +10,14 @@ class Planes
 
     // Declaración de métodos
 
-    public function speed() {
-        echo $this->speed_var;
-        echo "<br>";
+    protect function speed() {
+        echo $this->speed_var ;
     }
-    public function canFly() {
-        echo $this->canFly_var;
-        echo "<br>";
+    protect function canFly() {
+        echo $this->canFly_var ;
     }
-    public function maxPassengers() {
-        echo $this->maxPassengers_var;
-        echo "<br>";
+    protect function maxPassengers($num) {
+        $num->maxPassengers_var;
     }
 
-}
 ?>

@@ -1,6 +1,7 @@
 <?php
 
-class Bikes
+
+class Bikes extends vehicle
 {
  
     public $speed_var = '80 Km/h';
@@ -8,18 +9,17 @@ class Bikes
     public $maxPassengers_var ='2';
 
 
-    public function speed() {
-        echo $this->speed_var;
-        echo "<br>";
+    protect function speed() {
+        $this->speed_var;
     }
-    public function canFly() {
-        echo $this->canFly_var;
-        echo "<br>";
+    protect function canFly() {
+        $this->canFly_var;
     }
-    public function maxPassengers() {
-        echo $this->maxPassengers_var;
-        echo "<br>";
+    protect function maxPassengers($num) {
+        $num->maxPassengers_var;
     }
 
 }
 ?>
+
+
