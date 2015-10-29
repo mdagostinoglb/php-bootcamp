@@ -1,83 +1,9 @@
 <?php
-	abstract class Transport{
-		abstract protected function distance();
-		abstract protected function name();
-		abstract protected function speed();
-		abstract protected function canFly();
-		abstract protected function maxPassengers();	
-	}
-	
-	class Planes extends Transport{
-		public function distance(){
-			if (empty($_GET['hours'])) { $hours="";} else { $hours=filter_var($_GET['hours'], FILTER_VALIDATE_FLOAT);}
-			return $hours;
-		}
-		
-		public function name(){
-			echo "Planes";
-		}
-	
-		public function speed() {
-			return 900;
-		}
-		
-		public function canFly(){
-			echo "It can fly";
-		}
-		
-		public function maxPassengers(){
-			return 600;
-		}
-	}
-	
-	class Cars extends Transport{
-		public function distance(){
-			if (empty($_GET['hours'])) { $hours="";} else { $hours=filter_var($_GET['hours'], FILTER_VALIDATE_FLOAT);}
-			return $hours;
-		}
-		
-		public function name(){
-			echo "Cars";
-			}
-		
-	
-		public function speed(){
-			return 110;
-		}
-		
-		public function canFly(){
-			echo "It can not fly";
-		}
-		
-		public function maxPassengers(){
-			return 6;
-		}
-		
-	}
-	
-	class Bikes extends Transport{
-		public function distance(){
-			if (empty($_GET['hours'])) { $hours="";} else { $hours=filter_var($_GET['hours'], FILTER_VALIDATE_FLOAT);}
-			return $hours;
-		}
-		
-		public function name(){
-			echo "Bikes";
-		}
-	
-		public function speed() {
-			return 30;
-		}
-		
-		public function canFly(){
-			echo "It can not fly";
-		}
-		
-		public function maxPassengers(){
-			return 3;
-		}
-		
-	}
+	include("interface.php");
+	include("transport.php");
+	include("bikes.php");
+	include("cars.php");
+	include("planes.php");
 	
 	$one=array(new Planes,new Cars(),new Bikes());
 	
