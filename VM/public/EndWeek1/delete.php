@@ -10,6 +10,7 @@
 			$result = mysql_query($query) or die('Consulta fallida: ' . mysql_error());
 			if($result){
 				echo "Eliminado.";
+				unlink("archivo".$tid.".html");
 			}
 			mysql_close($link);
 		}
