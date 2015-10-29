@@ -67,7 +67,22 @@
 														
 														$file="";
 														$file = fopen("archivo".$line['id'].".html", "w+");
-														fwrite($file, $line1['title'] . "<br><br> Price: " . $line1['price'] . "<br><br> Description: " . $line1['description'] . PHP_EOL);
+														fwrite($file, $line1['title'] . "<br><br> Price: " . $line1['price'] . "<br><br> Description: " . $line1['description'] .
+														"<br><br>
+														<form action=\"change.php\" method=\"GET\">
+														<h3 style=\"color:red\">Edit:</h3>
+														<input style=\"width:200px\" type=\"hidden\" name=\"sid\" value=\"".$line['id']."\"><br>
+														Title:<br><input style=\"width:200px\" type=\"text\" name=\"stitle\" value=\"".$line1['title']."\"><br>
+														Price:<br><input style=\"width:200px\" type=\"text\" name=\"sprice\" value=\"".$line1['price']."\"><br>
+														Description:<br><input style=\"width:200px\" type=\"text\" name=\"sdesc\" value=\"".$line1['description']."\"><br>
+														<input type=\"submit\" value=\"Ready!\">
+														</form><br>
+														<form action=\"delete.php\" method=\"GET\">
+															<input style=\"width:200px\" type=\"hidden\" name=\"tid\" value=\"".$line['id']."\"><br>
+															<input type=\"submit\" value=\"Delete!\">
+														</form>
+														" 
+														. PHP_EOL);
 														fclose($file);
 														echo "\t\t<td><center><a href=\"archivo".$line['id'].".html\">$col</td>\n </a></center>";
 														//echo $line['id'];
