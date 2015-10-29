@@ -1,23 +1,24 @@
 <?php
 
-class Cars  extends vehicle
+class Cars  
 {
  
+    public $name='Car';
     public $speed_var = '200 Km/h';
     public $canFly_var ="It can't fly";
     public $maxPassengers_var ='5';
 
-    protect function speed() {
-        echo $this->speed_var;
-        echo "<br>";
+    public function speed() {
+        return $this->speed_var;
     }
-    protect function canFly() {
-        echo $this->canFly_var;
-        echo "<br>";
+    public function canFly() {
+        return $this->canFly_var;
     }
-    protect function maxPassengers() {
-        echo $this->maxPassengers_var;
-        echo "<br>";
+    public function maxPassengers() {
+        return ($this->maxPassengers_var);
+    }
+    public function getName() {
+        return $this->name;
     }
 
 }

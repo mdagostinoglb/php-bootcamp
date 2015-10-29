@@ -1,27 +1,26 @@
-
-
 <?php
-
 include("planes.php");
 include("cars.php");
 include("bikes.php");
+	
+	for($i='1';$i<'4';$i++){
+		switch ($i) {
+    		case '1':
+	        	$a= new Planes;
+	        	break;
+    		case '2':
+	        	$a= new Cars;
+	        	break;
+    		case '3':
+	        	$a= new Bikes;
+	        	break;
+        }
+        $name= ($a->getName());
 
-echo'<font color="red"> Planes <br> </font>';
-$Plane_1= new Planes();
-echo 'Speed: ';$Plane_1->speed();
-echo 'Can fly?: ';$Plane_1->canFly();
-echo 'Max. Passengers: '; $Plane_1->maxPassengers();
+		echo "<li><font color=#FF0000>$name </font><br></li>";
+		echo 'Speed: '.$a->speed();echo '<br>';
+		echo 'Can fly?: '.$a->canFly();echo '<br>';
+		echo 'Max. Passengers: '.$a->maxPassengers();echo '<br>';
 
-echo '<font color="red"> Cars<br> </font>';
-$Car_1= new Cars();
-echo 'Speed: ';$Car_1->speed();
-echo 'Can fly?: ';$Car_1->canFly();
-echo 'Max. Passengers: ';$Car_1->maxPassengers();
-
-echo '<font color="red"> Bikes <br> </font>';
-$Bike_1= new Bikes();
-echo 'Speed: ';$Bike_1->speed();
-echo 'Can fly?: ';$Bike_1->canFly();
-echo 'Max. Passengers: ';$Bike_1->maxPassengers();
-
+    }
 ?>
