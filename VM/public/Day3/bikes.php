@@ -2,8 +2,8 @@
     class Bikes extends Transport implements theFunctions
     {
         public function distance()
-        {
-            if (empty($_GET['hours'])) { 
+		{
+            if(empty($_GET['hours'])) { 
                 $hours="";
             } else { 
                 $hours=filter_var($_GET['hours'], FILTER_VALIDATE_FLOAT);
@@ -30,5 +30,6 @@
         {
             return $maxpassengers=3;
         }
+		
     }
 ?>
