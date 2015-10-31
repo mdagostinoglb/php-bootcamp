@@ -5,15 +5,15 @@
         {
             echo "Cars";
         } 
-		public function speed()
+        public function speed()
         {
             return 110;
         } 
-		public function canFly()
+        public function canFly()
         {
             echo "It can not fly";
         } 
-		public function maxPassengers()
+        public function maxPassengers()
         {
             return 6;
         }
