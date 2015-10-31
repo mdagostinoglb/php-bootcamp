@@ -20,7 +20,6 @@
         {
             return $speed=110;
         }
-
         public function canFly()
         {
             echo $canfly= "It can not fly";
