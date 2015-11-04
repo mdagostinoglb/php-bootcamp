@@ -6,7 +6,7 @@
 .linkButton {
 	background: none;
 	border: none;
-	color: #7a7a7a;
+	color: #2c1b76;
 	font-weight: bold;
 	text-decoration: underline;
 	cursor: pointer;
@@ -26,48 +26,45 @@
 	</div>
 
 	<div class="row">
-		<div class="large-5 large-centered columns">
+		<div class="large-3 large-centered columns">
 			<h1>
-				<font color="DarkSlateGray"><strong><br>BookStore Catalogue</strong></font>
+				<font color="DarkSlateGray"><strong><br>Book Info</strong></font>
 			</h1>
-			<h5>
-				<font color="DimGray">Choose a Book in order to view more info <br></font>
-			</h5>
 		</div>
 	</div>
 
-		
 <?php
 $host = "localhost";
 $dbname = "bookstore";
 $user = "root";
 $pass = "root";
+$titleselec = $_POST['bookname'];
 
 $DBH = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
-$STH = $DBH->query("SELECT ID, Title FROM Books");
+$STH = $DBH->query("SELECT * FROM Books WHERE Title = '$titleselec'");
 $STH->setFetchMode(PDO::FETCH_ASSOC);
+
 echo "<div class='row'>
 		<div class='large-8 large-centered columns'><div class='panel'>";
+
 while ($row = $STH->fetch()) {
     
-    $titleLink = $row['Title'];
-    echo "<div class='row'>
-		<div class='large-6 columns'><form action='bookinfo.php' method='post'>
-  			<input type='submit' name='bookname' value= '$titleLink' class='linkButton' /></form></div>
-	</div>";
+    echo "<dl>";
+    echo "<dt>Book Title: </dt>" . $row['Title'] . "<br/>" . "<dt>Book Description: </dt>" . $row['Description'] . "<br/>" . "<dt>Price: </dt>" . "$" . $row['Price'] . "<br/>";
+    echo "</dl>";
 }
+
 echo "</div></div>";
 
-?>	
+$id = $row['ID'];
+echo "<div class='row'>
+		<div class='large-6 columns'> <form action='editBook.php' method='post'>
+	  			<input type='hidden' name='bookID' value= '$id'/>
+	  			<input type='submit' name='bookedit' value= 'Edit the book' class='linkButton' />
+	  			</form> </div> </div>";
 
-        <form action="searchRes.php" method="POST">
-		<div class="row">
-			<div class="large-4 columns">
-				<input type="text" name="search" placeholder="Book Title" /> <input
-					type="submit" name="submit" value="Search" />
-			</div>
-		</div>
-	</form>
+?>
+
 
 	<script src="js/vendor/jquery.js"></script>
 	<script src="js/foundation.min.js"></script>
@@ -77,3 +74,4 @@ echo "</div></div>";
 
 </body>
 </html>
+
