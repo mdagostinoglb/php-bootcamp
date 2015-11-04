@@ -1,3 +1,16 @@
 <?php
 
-// Use this file for Exercise of day 1. You may need to create other files too.
+function __autoload($class_name)
+{
+    include $class_name . '.php';
+}
+
+
+$obj1  = new cars() ;
+echo "<br>";
+$obj2 = new planes() ;
+echo "<br>";
+$obj3 = new bikes();
+
+
+?>
