@@ -30,7 +30,7 @@ echo "<form action='success.php' method='POST'>
 	  			 <div class='row'>
 			<div class='large-6 columns'><input type='hidden' name='Book' value= '$bookId'/>
 	  			 <br/><font color='DarkSlateGray'><strong>Title: </strong></font> <input type='text' name= 'tinfo' value:''>
-				  <br/><font color='DarkSlateGray'><strong>Description:</strong></font> <textarea name = 'dinfo' ></textarea>
+			<br/><font color='DarkSlateGray'><strong>Description:</strong></font> <textarea name = 'dinfo' ></textarea>
 				 <br/><font color='DarkSlateGray'><strong>Price:</strong></font> <input type='text' name='pinfo' value:''>	
 				 <br/><input type='submit' name='submit' value='Done!'>
 				 </div>
