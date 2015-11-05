@@ -1,6 +1,64 @@
 <html>
     <head>
-        <link rel="stylesheet" href="index.css" />
+        <style>
+	    body{
+	        font-family: Arial, Helvetica, sans-serif;
+	    }
+	    table{
+	        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif; 
+	        font-size: 12px;    
+	        margin: 45px;     
+	        width: 480px; 
+	        border-collapse: collapse; 
+	    }
+	    th{
+	        font-size: 13px;     
+	        font-weight: normal;     
+	        padding: 8px;     
+	        background: #b9c9fe; 
+	        border-top: 4px solid #aabcfe;    
+	        border-bottom: 1px solid #fff; 
+	        color: #039; 
+	    }
+	    td{
+	        padding: 8px;     
+	        background: #e8edff;     
+	        border-bottom: 1px solid #fff; 
+	        color: #669;    
+	        border-top: 1px solid transparent; 
+	    }
+	    tr:hover td{ 
+	        background: #d0dafd; 
+	        color: #339; 
+	    }
+	    h1{
+	        color:red;
+	    }
+	    h2{
+	        color:blue;
+	    }
+	    input{
+	        width:375px;
+	        display:block;
+	        border: 1px solid #999;
+	        height: 35px;
+	        -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	        -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+	    }
+	    #button {
+	        margin:20px;
+	        width:100px;
+	        background:#09C;
+	        color:#fff;
+	        font-family: Tahoma, Geneva, sans-serif;
+	        height:30px;
+	        -webkit-border-radius: 15px;
+	        -moz-border-radius: 15px;
+	        border-radius: 15px;
+	        border: 1p solid #999;
+	    }
+        </style>
         <meta charset="utf-8" />
     </head>
 <html>
