@@ -128,7 +128,7 @@
 
     $app->match('/libro/{ident}/change/', function(Request $request,$ident) use ($app) {
         $sent = false;
-        include 'dbcon.php';
+        /*include 'dbcon.php';
         while($row = $STH->fetch()){
             if($row['id']=$ident){
                 $default = array(
@@ -144,7 +144,25 @@
             ->add('price')
             ->add('description')
             ->getForm();
+        $form->handleRequest($request);*/
+        $link = mysql_connect('localhost', 'root', '') or die('Can not connect to server: ' . mysql_error());
+        mysql_select_db('books') or die('Can not select the data base.');
+        mysql_query("SET NAMES 'utf8'");
+        $query=mysql_query("SELECT * FROM `books` WHERE `id`=$ident");
+        $default=mysql_fetch_row($query);
+        $default= array(
+            'id'=>$default[0],
+            'title'=>$default[1],
+            'price'=>$default[2],
+            'description'=>$default[3]
+        );
+        $form = $app['form.factory']->createBuilder('form', $default)
+            ->add('title')
+            ->add('price')
+            ->add('description')
+            ->getForm();
         $form->handleRequest($request);
+        
         if ('POST' == $request->getMethod()) {
             if ($form->isValid()) {
                 $default = $form->getData();
