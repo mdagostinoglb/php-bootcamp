@@ -41,8 +41,7 @@ $STH = $DBH->query("UPDATE Books SET Title = '$title',
 echo "<div class='row'>
 		<div class='large-12 columns'>";
 
-echo "<h1><a href='index.php'>Home</a></h1></div></div>";
-
+echo "<font color='white'><h1>All changes were done. You may want to go back to the </font><a href='index.php'>Book's Cathalogue</a></h1></div></div>";
 ?>
 
 

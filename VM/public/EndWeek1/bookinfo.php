@@ -52,16 +52,17 @@ while ($row = $STH->fetch()) {
     echo "<dl>";
     echo "<dt>Book Title: </dt>" . $row['Title'] . "<br/>" . "<dt>Book Description: </dt>" . $row['Description'] . "<br/>" . "<dt>Price: </dt>" . "$" . $row['Price'] . "<br/>";
     echo "</dl>";
+    $id = $row['ID'];
 }
 
 echo "</div></div>";
 
-$id = $row['ID'];
+
 echo "<div class='row'>
 		<div class='large-6 columns'> <form action='editBook.php' method='post'>
 	  			<input type='hidden' name='bookID' value= '$id'/>
 	  			<input type='submit' name='bookedit' value= 'Edit the book' class='linkButton' />
-	  			</form> </div> </div>";
+	  			</form></div></div>";
 
 ?>
 

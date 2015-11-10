@@ -28,10 +28,10 @@ $bookId = $_POST['bookID'];
 
 echo "<form action='success.php' method='POST'>
 	  			 <div class='row'>
-			<div class='large-6 columns'><input type='hidden' name='Book' value= '$bookId'/>
-	  			 <br/><dl><font color='DarkSlateGray'><strong><dt>Title:</dt></strong></font> <input type='text' name= 'tinfo' value:''>
+			<div class='large-6 columns'><input type='hidden' name='Book' value='$bookId'/>
+	  			 <br/><dl><font color='DarkSlateGray'><strong><dt>Title:</dt></strong></font> <input type='text' name= 'tinfo'>
 			<br/><font color='DarkSlateGray'><strong><dt>Description:</dt></strong></font> <textarea name = 'dinfo' ></textarea>
-				 <br/><font color='DarkSlateGray'><strong><dt>Price:</dt></strong></font> <input type='text' name='pinfo' value:''></dl>	
+				 <br/><font color='DarkSlateGray'><strong><dt>Price:</dt></strong></font> <input type='text' name='pinfo'></dl>	
 				 <br/><input type='submit' name='submit' value='Done!'>
 				 </div>
 		</div>
