@@ -1,0 +1,17 @@
+<?php
+    //ROOMS
+    Route::get('rooms','HotelController@rooms');
+    Route::get('room/{id}','HotelController@room');
+    Route::post('rooms','HotelController@postroom');
+	Route::post('room/{id}','HotelController@uproom');
+	//GUESTS
+    Route::get('guests','HotelController@guests');
+    Route::get('guest/{id}','HotelController@guest');
+    Route::post('guests','HotelController@postguest');
+	Route::post('guest/{id}','HotelController@upguest');
+	//BOOKINGS
+    Route::get('bookings','HotelController@bookings');
+    Route::get('booking/{id}','HotelController@booking');
+	Route::post('bookings','HotelController@postbooking');
+	Route::post('booking/{id}','HotelController@upbooking');
+?>
