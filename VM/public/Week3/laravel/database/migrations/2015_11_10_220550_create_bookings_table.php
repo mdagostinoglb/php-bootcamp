@@ -14,16 +14,21 @@ class CreateBookingsTable extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->increments('id');
-			$table->integer('room_id')
-				->unsigned()
-				->nullable();
+	    $table->integer('room_id')
+		->unsigned()
+		->nullable();
             $table->foreign('room_id')
                 ->references('id')->on('rooms')
                 ->onDelete('cascade');
-			$table->date('day_of_arrive');
-			$table->date('day_of_leaving');
-			$table->string('personal_ids');
-			$table->timestamps();
+	    $table->date('day_of_arrive');
+	    $table->date('day_of_leaving');
+	    $table->integer('personal_id')
+		->unsigned()
+		->nullable();
+	    $table->foreign('personal_id')
+                ->references('id')->on('guests')
+                ->onDelete('cascade');
+	    $table->timestamps();
         });
     }
 
