@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BOOKS</title>
+        <link rel="stylesheet" href="css/foundation.css" />
+        <script src="js/vendor/modernizr.js"></script>
+    </head>
+    <body> 
+        <div class="row">
+            <div class="large-12 columns">
+                <div class="panel">   
+                    <div class="books">
+                    {% set i = 0 %}
+                    {% for book in books  %}
+                        <div class="book">
+                            <h1>Title: {{ books[i].title }}</h1>
+                            <h2>Author: {{ books[i].author }}<h2>
+                            <h3><strong>Main characters:</strong></h3>
+                            <ul>
+                            {% set j = 0 %}
+                            {% for characters in books[i].main_characters  %}
+                                <li>{{books[i].main_characters[j]}}</li>
+                                {% set j = j + 1 %}
+                            {% endfor %}
+                            </ul>
+                            {% set i = i + 1 %}
+                        </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
