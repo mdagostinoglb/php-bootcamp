@@ -8,10 +8,6 @@ require_once __DIR__.'/vendor/autoload.php';
 
 $app = new Silex\Application();
 $app->register(new Silex\Provider\FormServiceProvider());
-$app->register(new Silex\Provider\TwigServiceProvider(), array(
-        'twig.path' => __DIR__ . '/templates',
-        'twig.class_path' => __DIR__ . '/../vendor/twig/twig/lib',
-    ));
 
 $app->get('/', function () 
 {
