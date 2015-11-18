@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BookStore</title>
+<link rel="stylesheet" href="css/foundation.css" />
+<link rel="stylesheet" href="css/normalize.css">
+<script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+
+	<div id="bg">
+		<img src="img/book-back.jpg" alt="">
+	</div>
+	<title>Book Info</title>
+
+	<div class="row">
+		<div class="large-7 large-centered columns">
+			<div class='panel'>
+				<div class="books">
+					{% set var1 = 0 %} {% for book in books %}
+					<div class="book">
+						<h1>Titlte: {{ books[var1].title }}</h1>
+						<h2>
+							Author: {{ books[var1].author }}
+							</h2>
+								<strong>Main characters:</strong>
+								<ul>
+									{% set var2 = 0 %} {% for characters in
+									books[var1].main_characters %}
+									<li>{{books[var1].main_characters[var2]}}</li> {% set var2 =
+									var2 + 1 %} {% endfor %}
+								</ul>
+								{% set var1 = var1 + 1 %}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+
+</body>
+</html>
+
