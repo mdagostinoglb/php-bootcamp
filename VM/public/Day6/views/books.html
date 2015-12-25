@@ -1,0 +1,20 @@
+<center>
+    <div class="books">
+        {% set counter = 0 %}
+        {% for book in books  %}
+            <div class="book">
+                <h1>Titlte: {{ books[counter].title }}</h1>
+                <h2>Author: {{ books[counter].author }}<h2>
+                <strong>Main characters:</strong>
+                <ul>
+                    {% set counter1 = 0 %}
+                    {% for characters in books[counter].main_characters  %}
+                        <li>{{books[counter].main_characters[counter1]}}</li>
+                        {% set counter1 = counter1 + 1 %}
+                    {% endfor %}
+                </ul>
+                {% set counter = counter + 1 %}
+            </div>
+        {% endfor %}
+    </div>
+</center>
